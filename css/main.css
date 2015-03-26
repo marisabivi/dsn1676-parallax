@@ -1,0 +1,71 @@
+@-moz-viewport {width: device-width; scale:1;}
+@-ms-viewport {width: device-width; scale:1;}
+@-o-viewport {width: device-width; scale:1;}
+@-webkit-viewport {width: device-width; scale:1;}
+@viewport {width: device-width; scale:1;}
+
+html {
+    box-sizing: border-box;
+    
+    -moz-text-size-adjust:100%;
+    -ms-text-size-adjust:100%;
+    -webkit-text-size-adjust:100%;
+    text-size-adjust:100%;
+    overflow: hidden;
+}
+
+*, *::before, *::after {
+ box-sizing: inherit;   
+}
+
+
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.wrapper{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    
+    -webkit-perspective: 1px;
+    perspective: 1px;
+}
+
+.parallaz-group {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.back {
+    background: url(../images/alps_mountains_dual_monitor-other.jpg) center top / cover no-repeat; 
+    padding-top: 40%;
+    -webkit-transform: translateZ(-1px) scale(2.05);
+    transform: translateZ(-1px) scale(2.05);
+    position: relative;
+    top: calc(((100vh - 40vw) / 4 ) * -2 );
+}
+
+.front {
+    background-color:cornflowerblue;
+    color: #fff;
+    padding: 15em 1em;
+   -webkit-transform: translateZ(0);
+    transform: translateZ(0); 
+    
+}
+
+.middle {
+    margin: 0;
+    position: absolute;
+    top: 0;
+    -webkit-transform: translateZ(-0.5px);
+    transform: translateZ(-0.5px);
+    width: 100%;
+    font-size: 5em;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
